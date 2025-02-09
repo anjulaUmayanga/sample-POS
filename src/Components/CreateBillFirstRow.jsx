@@ -67,39 +67,39 @@ export default function FirstRow(){
 
                     <div className="flex w-full flex-col ">
                         <div className="flex w-full flex-row">
-                            <div className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 h-14 m-1 flex justify-center items-center ">
+                            <button className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 h-14 m-1 flex justify-center items-center ">
                                 GFT
-                            </div>
-                            <div className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 m-1 flex justify-center items-center ">
+                            </button>
+                            <button className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 m-1 flex justify-center items-center ">
                                 HLD
-                            </div>
-                            <div className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 m-1 flex justify-center items-center ">
+                            </button>
+                            <button className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 m-1 flex justify-center items-center ">
                                 D-IN
-                            </div>
+                            </button>
                         </div>
 
                         <div className="flex w-full flex-row">
-                            <div className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 h-14 m-1 flex justify-center items-center ">
+                            <button className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 h-14 m-1 flex justify-center items-center ">
                                 DISC
-                            </div>
-                            <div className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 m-1 flex justify-center items-center ">
+                            </button>
+                            <button className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 m-1 flex justify-center items-center ">
                                 CPN
-                            </div>
-                            <div className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 m-1 flex justify-center items-center ">
+                            </button>
+                            <button className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 m-1 flex justify-center items-center ">
                                 TCKTS
-                            </div>
+                            </button>
                         </div>
 
                         <div className="flex w-full flex-row">
-                            <div className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 h-14 m-1 flex justify-center items-center ">
+                            <button className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 h-14 m-1 flex justify-center items-center ">
                                 TIPS
-                            </div>
-                            <div className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 m-1 flex justify-center items-center ">
+                            </button>
+                            <button className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 m-1 flex justify-center items-center ">
                                 LOTTO
-                            </div>
-                            <div className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 m-1 flex justify-center items-center ">
+                            </button>
+                            <button className="bg-gray-400 shadow-md shadow-gray-900 w-1/3 m-1 flex justify-center items-center ">
                                DWR
-                            </div>
+                            </button>
                         </div>
                         
                     </div>

@@ -12,13 +12,13 @@ export default function Middle(){
                     </div>
                 </div>
 
-                <div className="bg-gray-400 border-l-2 border-gray-800 flex justify-center items-center px-4 w-20 h-20">
+                <button className="bg-gray-400 border-l-2 border-gray-800 flex justify-center items-center px-4 w-20 h-20">
                     <div className="bg-yellow-500 w-16 h-12 flex justify-center items-center">
                         <Link to={'/'} >
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-left"><path d="M18 15h-6v4l-7-7 7-7v4h6v6z"/></svg>
                         </Link>
                     </div>
-                </div>
+                </button>
 
                 <div className="bg-gray-400 border-l-2 border-gray-800 flex justify-center items-center px-4 w-30 h-30">
                     <div className="bg-yellow-500 w-16 h-12 flex justify-center items-center">
