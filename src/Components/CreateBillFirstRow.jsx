@@ -1,4 +1,11 @@
-export default function FirstRow(){
+import { useState } from "react";
+import Items from "./ItemsForBill";
+
+export default function FirstRow({selectedItems} ){
+   
+    const calculateTotal = () => {
+        return selectedItems.reduce((acc, item) => acc + item.total, 0);
+    };
     return(
         <div className="flex w-full flex-col"> 
                 <div className="bg-black flex-row pr-8 pl-4 justify-between p-2 w-full text-green-400 flex  h-20">
@@ -41,28 +48,27 @@ export default function FirstRow(){
                         </div>
                         
                     </div>
-                    <div className="w-full flex flex-row h-52">
-                           <table className="w-full border-collapse border border-gray-300">
-                                <thead>
-                                    <tr className="bg-gray-200 ">
-                                        <th className="w-2/4 px-4 py-2 text-left border border-gray-300">DESCRIPTION</th>
-                                        <th className="w-1/4 px-4 py-2 text-center border border-gray-300">QTY</th>
-                                        <th className="w-1/4 px-4 py-2 text-center border border-gray-300">TOTAL</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr className="border-b text-start ">
-                                        <td className="px-4 py-1 text-left">abnchgvcghjvhjgbkjhlikj;oklk</td>
-                                        <td className="px-4 py-1  text-center bg-green-700">1</td>
-                                        <td className="px-4 py-1  text-center">15</td>
-                                    </tr>
-                                    <tr className="border-b">
-                                        <td className="px-4 py-1 text-left">abnchgvcghjvhjgbkjhlikj;oklk</td>
-                                        <td className="px-4 py-1  text-center bg-green-700">1</td>
-                                        <td className="px-4 py-1  text-center">15</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div className="w-full flex flex-row h-40 ">
+                           <div className="w-full max-h-[200px] overflow-y-auto">
+                            <table className="w-full border-collapse border border-gray-300">
+                                    <thead>
+                                        <tr className="bg-gray-200 ">
+                                            <th className="w-2/4 px-4 py-2 text-left border border-gray-300">DESCRIPTION</th>
+                                            <th className="w-1/4 px-4 py-2 text-center border border-gray-300">QTY</th>
+                                            <th className="w-1/4 px-4 py-2 text-center border border-gray-300">TOTAL</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {selectedItems.map((item, index) => (
+                                            <tr className="border-b" key={index}>
+                                                <td className="px-4 py-1 text-left">{item.name}</td>
+                                                <td className="px-4 py-1 text-center bg-green-700"  >{item.qty}</td>
+                                                <td className="px-4 py-1 text-center">{item.total}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                           </div>
                     </div> 
 
                     <div className="flex w-full flex-col ">
@@ -102,7 +108,11 @@ export default function FirstRow(){
                             </button>
                         </div>
                         
+                        
                     </div>
+                    <div className="bg-yellow-400 p-4">
+                Total: <span className="font-bold">{calculateTotal().toFixed(2)}</span> 
+            </div>
                 </div>
             </div>
     );
